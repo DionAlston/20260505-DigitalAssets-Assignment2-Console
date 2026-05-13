@@ -47,7 +47,7 @@ namespace _20260422_Test
             
         using (StreamWriter write = new StreamWriter(filepath))
         {
-            StreamWriter.WriteLine("ProductID, ProductName, ProductBrand, Price, Quantity") //Very important - will not be able to save without matching columns
+            StreamWriter.WriteLine("ProductID, ProductName, ProductBrand, Price, Quantity"); //Very important - will not be able to save without matching columns
             {
                 foreach (var p in products)
                 {

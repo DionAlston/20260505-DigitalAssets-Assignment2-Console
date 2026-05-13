@@ -106,7 +106,6 @@
         private Button button2;
         private Button button1;
 
-        internal class Product
         
 
     }
