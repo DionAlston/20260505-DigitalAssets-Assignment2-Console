@@ -108,5 +108,17 @@ namespace _20260422_Test
             txtQuantity.Clear();
             // 13/05 Change txt element names to above in Inventory form design
         }
+
+        // Moving text feature
+        private void timer1_Tick(object sender, EventArgs e)
+        {
+            labelWelcome.Left -= 2;
+
+            // If the label disappears off the left edge, reset it to the right edge
+            if (labelWelcome.Right < 0)
+            {
+                labelWelcome.Left = this.Width;
+            }
+        }
     }
 }
