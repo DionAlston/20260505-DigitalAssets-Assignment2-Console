@@ -6,8 +6,8 @@ using System.Drawing;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
-using System.IO; //New
-using System.Text.RegularExpressions; //New
+using System.IO;                        // New
+using System.Text.RegularExpressions;   // New
 using System.Windows.Forms;
 
 namespace _20260422_Test
@@ -19,18 +19,52 @@ namespace _20260422_Test
             InitializeComponent();
         }
 
+        // Data structures to hold products in bindingList and bindingSource
+        // Function: Allows for updating of DGV and UI
+        private BindingList<Product> _inventoryList = new BindlingList<Product>();
+        private BindingSource _bindingSource = new BindingSource();
+
+        string filePath = "./inventory.csv";
+
+
+        // For loading of UC_Inventory
+        // NOTE: Configure and implement CSV file
         private void UC_Inventory_Load(object sender, EventArgs e)
         {
+            string path = filePath;
 
+            var tempData = InventoryService.LoadFromCSV(path);
+
+            _inventoryList.Clear();
+            foreach (var item in tempData)
+            {
+                _inventoryList.Add(item);
+            }
+
+            dgvInventory.DataSource = _inventoryList;
         }
 
-        private void button1_Click(object sender, EventArgs e)
+        private void textBox1_TextChanged(object sender, EventArgs e)   // ???
         {
 
         }
 
-        private void textBox1_TextChanged(object sender, EventArgs e)
+        private void btnAdd_Click(object sender, EventArgs e)
         {
+            if (!ValidateInputs()) = return;
+
+            int newId
+            string name
+            string brand
+            decimal price
+            int quantity
+
+            Product newProduct = new Product (newId, name, brand, price, quantity);
+            _inventoryList.Add(newProduct);
+
+            _bindingSource.ResetBindings = (false);
+
+            ClearFields();
 
         }
 
@@ -46,23 +80,23 @@ namespace _20260422_Test
             }
             var productToUpdate = _inventoryList.FirstOrDefault(p => p.ProductID == idToUpdate);
 
-            // Logic for updating declared fields
+            // Updating declared fields if properties not Null
             if (productToUpdate != null)
             {
-                // 3. Validate the new inputs before applying changes
+                // Validate the new inputs before applying changes
                 if (ValidateInputs())
                 {
-                    // 4. Update the object properties (excluding ProductID)
+                    // Update the object properties (excluding ProductID)
                     productToUpdate.ProductName = txtName.Text;
                     productToUpdate.ProductBrand = txtBrand.Text;
                     productToUpdate.ProductPrice = decimal.Parse(txtPrice.Text);
                     productToUpdate.ProductQuantity = int.Parse(txtQuantity.Text);
 
-                    // 5. Refresh the grid to show the updated data
+                    // Refresh the grid to show the updated data
                     _bindingSource.ResetBindings(false);
                     dgvInventory.Refresh();
 
-                    // 6. Clear input fields
+                    // Clear input fields
                     ClearFields();
                     MessageBox.Show("Product updated successfully in catalogue.");
                 }
@@ -73,7 +107,24 @@ namespace _20260422_Test
             }
         }
 
-        // In regex: Validating inventory user inputs into editable fields
+        private void btnDelete_Click(object sender, EventArgs e)
+        {
+            // Search
+            {
+
+            }
+
+            Product productToDelete = Product 
+        }
+
+        private void btnClear_Click(object sender, EventArgs e)
+        {
+            ,
+
+            ClearFields();
+        }
+
+        // Validating user inputs into editable fields using regex
         private bool ValidateInputs()
         {
             // Check if name has characters that are not upper or lowercase alphabet letters, positive integers 0-9 or spaces
@@ -98,7 +149,7 @@ namespace _20260422_Test
             return true;
             // NOTE python made for processing data and for analysis not for building programs
         }
-        // logic for clearing editable fields
+        // Clearing of editable fields, used in btnAdd_Click
         private void ClearFields()
         {
             txtID.Clear();
@@ -106,10 +157,12 @@ namespace _20260422_Test
             txtBrand.Clear();
             txtPrice.Clear();
             txtQuantity.Clear();
-            // 13/05 Change txt element names to above in Inventory form design
+            // NOTE 13/05 Change txt element names to above in Inventory form design
+                 // 17/05 ???
         }
 
-        // Moving text feature
+        // EXPERIMENTAL new feature / Moving text
+        // 17/05 Make colour in gradiance (rainbow) with timer2?
         private void timer1_Tick(object sender, EventArgs e)
         {
             labelWelcome.Left -= 2;

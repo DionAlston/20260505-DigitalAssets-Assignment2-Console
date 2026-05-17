@@ -28,33 +28,35 @@ namespace _20260422_Test
                         int d = int.Parse(parts[0]);                         //Takes line from first comma and turns it into a string
                         string name = parts[1];
                         string brand = parts[2];
-                        decimal price = decimal.Parse(parts[3] / 100m);     //Whatever in CSV file converts to decimal with dot decided by 100 converted into decimal figure with dot
-                        int quantity = 0; // Initialise every product into 0 quantity
+                        decimal price = decimal.Parse(parts[3] / 100m);     // Whatever in CSV file converts to decimal with dot decided by 100 converted into decimal figure with dot
+                        int quantity = 0;                                   // Initialise every product into 0 quantity
 
                         products.Add(new Product(id, name, brand, price, quantity));
                         {
-                            catch //For extension handling, for capturing errors in int/string/decimal/int lines, skips rows with formatting errors etc
+                            catch                                           //For extension handling, for capturing errors in int/string/decimal/int lines, skips rows with formatting errors etc
                         }
                     }
                 }
             }
-            return products; // Will return list
+            return products;                                                // Will return list
         }
 
 
-        public static void SaveToCSV(string filepath, List<Product> products) //Error in Savetocsv b/c no void
+        public static void SaveToCSV(string filepath, List<Product> products) // Error in Savetocsv b/c no void
         {
             
         using (StreamWriter write = new StreamWriter(filepath))
         {
-            StreamWriter.WriteLine("ProductID, ProductName, ProductBrand, Price, Quantity"); //Very important - will not be able to save without matching columns
+            StreamWriter.WriteLine("ProductID, ProductName, ProductBrand, Price, Quantity");                                    //Very important - will not be able to save without matching columns
             {
                 foreach (var p in products)
                 {
-                    string line = $"{p.ProductID},{p.ProductName},{p.ProductBrand},{p.ProductPrice*100},{p.ProductQuantity}"; //Line could be seperated
+                    string line = $"{p.ProductID},{p.ProductName},{p.ProductBrand},{p.ProductPrice*100},{p.ProductQuantity}";   // Line could be seperated
                     writer.WriteLine(line);
                 }
             }
         }
     }
 }
+    // NOTE 17/05
+    // Configure the CSV file
