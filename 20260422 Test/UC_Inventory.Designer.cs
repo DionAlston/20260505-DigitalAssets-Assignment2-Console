@@ -44,6 +44,7 @@
             this.labelQuantity = new System.Windows.Forms.Label();
             this.labelBrand = new System.Windows.Forms.Label();
             this.panelNavigation = new System.Windows.Forms.Panel();
+            this.btnInventory = new System.Windows.Forms.Button();
             this.buttonHome = new System.Windows.Forms.Button();
             this.labelWelcome = new System.Windows.Forms.Label();
             this.timer1 = new System.Windows.Forms.Timer(this.components);
@@ -173,11 +174,22 @@
             // panelNavigation
             // 
             this.panelNavigation.BackColor = System.Drawing.SystemColors.ControlDark;
+            this.panelNavigation.Controls.Add(this.btnInventory);
             this.panelNavigation.Controls.Add(this.buttonHome);
             this.panelNavigation.Location = new System.Drawing.Point(0, 0);
             this.panelNavigation.Name = "panelNavigation";
             this.panelNavigation.Size = new System.Drawing.Size(750, 45);
             this.panelNavigation.TabIndex = 15;
+            // 
+            // btnInventory
+            // 
+            this.btnInventory.Font = new System.Drawing.Font("Segoe UI", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
+            this.btnInventory.Location = new System.Drawing.Point(113, 10);
+            this.btnInventory.Name = "btnInventory";
+            this.btnInventory.Size = new System.Drawing.Size(97, 26);
+            this.btnInventory.TabIndex = 3;
+            this.btnInventory.Text = "Inventory";
+            this.btnInventory.UseVisualStyleBackColor = true;
             // 
             // buttonHome
             // 
@@ -266,5 +278,7 @@
         private Button buttonHome;
         private System.Windows.Forms.Timer timer1;
         private Panel panel1;
+        private Button btnInventory;
+        private TextBox txtDelete;
     }
 }

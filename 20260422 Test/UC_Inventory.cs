@@ -21,10 +21,10 @@ namespace _20260422_Test
 
         // Data structures to hold products in bindingList and bindingSource
         // Function: Allows for updating of DGV and UI
-        private BindingList<Product> _inventoryList = new BindlingList<Product>();
+        private BindingList<Product> _inventoryList = new BindingList<Product>();
         private BindingSource _bindingSource = new BindingSource();
 
-        string filePath = "./inventory.csv";
+        string filePath = "./inventory.csv"; // What CSV file name?
 
 
         // For loading of UC_Inventory
@@ -51,20 +51,6 @@ namespace _20260422_Test
 
         private void btnAdd_Click(object sender, EventArgs e)
         {
-            if (!ValidateInputs()) = return;
-
-            int newId
-            string name
-            string brand
-            decimal price
-            int quantity
-
-            Product newProduct = new Product (newId, name, brand, price, quantity);
-            _inventoryList.Add(newProduct);
-
-            _bindingSource.ResetBindings = (false);
-
-            ClearFields();
 
         }
 
@@ -109,21 +95,54 @@ namespace _20260422_Test
 
         private void btnDelete_Click(object sender, EventArgs e)
         {
-            // Search
+            string searchTerm = txtDelete.Text.Trim();
+
+            if (string.IsNullOrEmpty(searchTerm));
             {
+                MessageBox.Show("Please enter a valid product ID to delete from the catalogue.");   // KT Show method
+                return;
+            } // NOTE Bindinglist for auto refresh function w/ user inputs
 
+            Product productToDelete = _inventoryList.FirstOrDefault(p =>
+                    p.ProductID.ToString() == searchTerm ||
+                    p.ProductName.Equals(searchTerm, StringComparison.OrdinalIgnoreCase));
+
+            if (productToDelete != null);
+            {
+                DialogResult result = MessageBox.Show($"Confirm deletion of product " +
+                    $"{productToDelete.ProductName}?", "Are you sure?", MessageBoxButtons.YesNo);
+
+                if (result == DialogResult.Yes);
+                {
+                    _inventoryList.Remove(ProductToDelete);
+                    txtDelete.Clear();
+                    MessageBox.Show("Product Deleted from catalogue.");
+                }
+
+                else
+                {
+                    MessageBox.Show("No Product found in the catalogue.");
+                }
             }
-
-            Product productToDelete = Product 
         }
 
-        private void btnClear_Click(object sender, EventArgs e)
+        private void btnSave_Click(object sender, EventArgs e)
         {
-            ,
+            try
+            {
+                string path = filePath;
+                List<Product> listToSave = _inventoryList.ToList();
 
-            ClearFields();
+                InventoryService.SaveToCSV(path, listToSave);
+                MessageBox.Show("Saved to CSV file");
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show("Error saving data: " + ex.Message);
+            }
         }
 
+        // Input validation
         // Validating user inputs into editable fields using regex
         private bool ValidateInputs()
         {

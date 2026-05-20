@@ -30,12 +30,14 @@
         {
             this.panelNavigation = new System.Windows.Forms.Panel();
             this.buttonHome = new System.Windows.Forms.Button();
+            this.btnInventory = new System.Windows.Forms.Button();
             this.panelNavigation.SuspendLayout();
             this.SuspendLayout();
             // 
             // panelNavigation
             // 
             this.panelNavigation.BackColor = System.Drawing.SystemColors.ControlDark;
+            this.panelNavigation.Controls.Add(this.btnInventory);
             this.panelNavigation.Controls.Add(this.buttonHome);
             this.panelNavigation.Location = new System.Drawing.Point(0, 0);
             this.panelNavigation.Name = "panelNavigation";
@@ -51,6 +53,16 @@
             this.buttonHome.TabIndex = 1;
             this.buttonHome.Text = "Homepage";
             this.buttonHome.UseVisualStyleBackColor = true;
+            // 
+            // btnInventory
+            // 
+            this.btnInventory.Font = new System.Drawing.Font("Segoe UI", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
+            this.btnInventory.Location = new System.Drawing.Point(113, 10);
+            this.btnInventory.Name = "btnInventory";
+            this.btnInventory.Size = new System.Drawing.Size(97, 26);
+            this.btnInventory.TabIndex = 2;
+            this.btnInventory.Text = "Inventory";
+            this.btnInventory.UseVisualStyleBackColor = true;
             // 
             // UC_Home
             // 
@@ -68,5 +80,6 @@
 
         private Panel panelNavigation;
         private Button buttonHome;
+        private Button btnInventory;
     }
 }

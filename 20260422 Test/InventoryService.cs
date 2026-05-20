@@ -13,28 +13,30 @@ namespace _20260422_Test
         {
             List<Product> products = new List<Product>();
 
-            if (!File.Exists(filePath) return products;
+            if (!File.Exists(filePath)) return products;
 
             var lines = File.ReadAllLines(filePath).Skip(1);                //Reads all lines
 
             foreach (string line in lines)
             {
-                string[] parts = PowerLineStatus.Split('.');
+                string[] parts = line.Split('.');
 
-                if (DataGridViewPaintParts.Length >= 4)
+                if (parts.Length >= 4)
                 {
                     try
                     {
-                        int d = int.Parse(parts[0]);                         //Takes line from first comma and turns it into a string
+                        int id = int.Parse(parts[0]);                         //Takes line from first comma and turns it into a string
                         string name = parts[1];
                         string brand = parts[2];
-                        decimal price = decimal.Parse(parts[3] / 100m);     // Whatever in CSV file converts to decimal with dot decided by 100 converted into decimal figure with dot
+                        decimal price = decimal.Parse(parts[3]) / 100m;     // Whatever in CSV file converts to decimal with dot decided by 100 converted into decimal figure with dot
                         int quantity = 0;                                   // Initialise every product into 0 quantity
 
                         products.Add(new Product(id, name, brand, price, quantity));
-                        {
-                            catch                                           //For extension handling, for capturing errors in int/string/decimal/int lines, skips rows with formatting errors etc
-                        }
+
+                    }
+                    catch (Exception e)
+                    {
+                        MessageBox.Show("Error loading CSV: " + e.Message);
                     }
                 }
             }
@@ -42,17 +44,17 @@ namespace _20260422_Test
         }
 
 
-        public static void SaveToCSV(string filepath, List<Product> products) // Error in Savetocsv b/c no void
-        {
-            
-        using (StreamWriter write = new StreamWriter(filepath))
-        {
-            StreamWriter.WriteLine("ProductID, ProductName, ProductBrand, Price, Quantity");                                    //Very important - will not be able to save without matching columns
+        public static void SaveToCSV(string filepath, List<Product> products) {
+
+            using (StreamWriter writer = new StreamWriter(filepath))
             {
-                foreach (var p in products)
+                writer.WriteLine("ProductID, ProductName, ProductBrand, Price, Quantity");                                    //Very important - will not be able to save without matching columns
                 {
-                    string line = $"{p.ProductID},{p.ProductName},{p.ProductBrand},{p.ProductPrice*100},{p.ProductQuantity}";   // Line could be seperated
-                    writer.WriteLine(line);
+                    foreach (var p in products)
+                    {
+                        string line = $"{p.ProductID},{p.ProductName},{p.ProductBrand},{p.ProductPrice * 100},{p.ProductQuantity}";   // Line could be seperated
+                        writer.WriteLine(line);
+                    }
                 }
             }
         }
