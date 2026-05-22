@@ -49,8 +49,18 @@
             this.labelWelcome = new System.Windows.Forms.Label();
             this.timer1 = new System.Windows.Forms.Timer(this.components);
             this.panel1 = new System.Windows.Forms.Panel();
+            this.dgvInventory = new System.Windows.Forms.DataGridView();
+            this.txtDelete = new System.Windows.Forms.TextBox();
+            this.label1 = new System.Windows.Forms.Label();
+            this.label2 = new System.Windows.Forms.Label();
+            this.ProductID = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.ProductName = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.ProductBrand = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.ProductPrice = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.ProductQuantity = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.panelNavigation.SuspendLayout();
             this.panel1.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.dgvInventory)).BeginInit();
             this.SuspendLayout();
             // 
             // btnAdd
@@ -66,7 +76,7 @@
             // 
             this.btnDelete.Font = new System.Drawing.Font("Segoe UI", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
             this.btnDelete.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))));
-            this.btnDelete.Location = new System.Drawing.Point(157, 292);
+            this.btnDelete.Location = new System.Drawing.Point(157, 336);
             this.btnDelete.Name = "btnDelete";
             this.btnDelete.Size = new System.Drawing.Size(102, 23);
             this.btnDelete.TabIndex = 1;
@@ -205,7 +215,7 @@
             // 
             this.labelWelcome.AutoSize = true;
             this.labelWelcome.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
-            this.labelWelcome.Location = new System.Drawing.Point(210, 50);
+            this.labelWelcome.Location = new System.Drawing.Point(225, 48);
             this.labelWelcome.Name = "labelWelcome";
             this.labelWelcome.Size = new System.Drawing.Size(300, 21);
             this.labelWelcome.TabIndex = 16;
@@ -235,10 +245,83 @@
             this.panel1.Size = new System.Drawing.Size(256, 157);
             this.panel1.TabIndex = 17;
             // 
+            // dgvInventory
+            // 
+            this.dgvInventory.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.dgvInventory.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
+            this.ProductID,
+            this.ProductName,
+            this.ProductBrand,
+            this.ProductPrice,
+            this.ProductQuantity});
+            this.dgvInventory.Location = new System.Drawing.Point(284, 72);
+            this.dgvInventory.Name = "dgvInventory";
+            this.dgvInventory.RowTemplate.Height = 25;
+            this.dgvInventory.Size = new System.Drawing.Size(443, 361);
+            this.dgvInventory.TabIndex = 18;
+            // 
+            // txtDelete
+            // 
+            this.txtDelete.Location = new System.Drawing.Point(10, 337);
+            this.txtDelete.Name = "txtDelete";
+            this.txtDelete.Size = new System.Drawing.Size(136, 23);
+            this.txtDelete.TabIndex = 19;
+            this.txtDelete.TextChanged += new System.EventHandler(this.textBox1_TextChanged_1);
+            // 
+            // label1
+            // 
+            this.label1.AutoSize = true;
+            this.label1.Location = new System.Drawing.Point(48, 82);
+            this.label1.Name = "label1";
+            this.label1.Size = new System.Drawing.Size(181, 15);
+            this.label1.TabIndex = 20;
+            this.label1.Text = "Add or Edit Product in Catalogue";
+            this.label1.Click += new System.EventHandler(this.label1_Click);
+            // 
+            // label2
+            // 
+            this.label2.AutoSize = true;
+            this.label2.Location = new System.Drawing.Point(28, 319);
+            this.label2.Name = "label2";
+            this.label2.Size = new System.Drawing.Size(220, 15);
+            this.label2.TabIndex = 21;
+            this.label2.Text = "Delete a Catalogue listing by ID or Name";
+            // 
+            // ProductID
+            // 
+            this.ProductID.HeaderText = "ID";
+            this.ProductID.Name = "ProductID";
+            this.ProductID.Width = 50;
+            // 
+            // ProductName
+            // 
+            this.ProductName.HeaderText = "Name";
+            this.ProductName.Name = "ProductName";
+            // 
+            // ProductBrand
+            // 
+            this.ProductBrand.HeaderText = "Brand";
+            this.ProductBrand.Name = "ProductBrand";
+            // 
+            // ProductPrice
+            // 
+            this.ProductPrice.HeaderText = "Price";
+            this.ProductPrice.Name = "ProductPrice";
+            // 
+            // ProductQuantity
+            // 
+            this.ProductQuantity.HeaderText = "Qty";
+            this.ProductQuantity.Name = "ProductQuantity";
+            this.ProductQuantity.Width = 50;
+            // 
             // UC_Inventory
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 15F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
+            this.Controls.Add(this.label2);
+            this.Controls.Add(this.label1);
+            this.Controls.Add(this.txtDelete);
+            this.Controls.Add(this.dgvInventory);
             this.Controls.Add(this.panel1);
             this.Controls.Add(this.labelWelcome);
             this.Controls.Add(this.panelNavigation);
@@ -252,6 +335,7 @@
             this.panelNavigation.ResumeLayout(false);
             this.panel1.ResumeLayout(false);
             this.panel1.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.dgvInventory)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -279,6 +363,14 @@
         private System.Windows.Forms.Timer timer1;
         private Panel panel1;
         private Button btnInventory;
+        private DataGridView dgvInventory;
         private TextBox txtDelete;
+        private Label label1;
+        private Label label2;
+        private DataGridViewTextBoxColumn ProductID;
+        private DataGridViewTextBoxColumn ProductName;
+        private DataGridViewTextBoxColumn ProductBrand;
+        private DataGridViewTextBoxColumn ProductPrice;
+        private DataGridViewTextBoxColumn ProductQuantity;
     }
 }
