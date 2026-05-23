@@ -28,85 +28,91 @@
         /// </summary>
         private void InitializeComponent()
         {
-            this.panelNavigation = new System.Windows.Forms.Panel();
-            this.btnInventory = new System.Windows.Forms.Button();
-            this.buttonHome = new System.Windows.Forms.Button();
-            this.label1 = new System.Windows.Forms.Label();
-            this.label2 = new System.Windows.Forms.Label();
-            this.panelNavigation.SuspendLayout();
-            this.SuspendLayout();
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(UC_Home));
+            labelWelcomeInfo = new Label();
+            labelWelcomeBig = new Label();
+            pictureBoxLogoBanner = new PictureBox();
+            labelCopyright = new Label();
+            labelWelcomeDC = new Label();
+            ((System.ComponentModel.ISupportInitialize)pictureBoxLogoBanner).BeginInit();
+            SuspendLayout();
             // 
-            // panelNavigation
+            // labelWelcomeInfo
             // 
-            this.panelNavigation.BackColor = System.Drawing.SystemColors.ControlDark;
-            this.panelNavigation.Controls.Add(this.btnInventory);
-            this.panelNavigation.Controls.Add(this.buttonHome);
-            this.panelNavigation.Location = new System.Drawing.Point(0, 0);
-            this.panelNavigation.Name = "panelNavigation";
-            this.panelNavigation.Size = new System.Drawing.Size(750, 45);
-            this.panelNavigation.TabIndex = 0;
+            labelWelcomeInfo.AutoSize = true;
+            labelWelcomeInfo.Font = new Font("Segoe UI", 14.25F, FontStyle.Bold, GraphicsUnit.Point);
+            labelWelcomeInfo.ForeColor = SystemColors.ControlText;
+            labelWelcomeInfo.Location = new Point(21, 240);
+            labelWelcomeInfo.Name = "labelWelcomeInfo";
+            labelWelcomeInfo.Size = new Size(550, 25);
+            labelWelcomeInfo.TabIndex = 1;
+            labelWelcomeInfo.Text = "Stationary and Consumable Stores Management Application\r\n";
             // 
-            // btnInventory
+            // labelWelcomeBig
             // 
-            this.btnInventory.Font = new System.Drawing.Font("Segoe UI", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
-            this.btnInventory.Location = new System.Drawing.Point(113, 10);
-            this.btnInventory.Name = "btnInventory";
-            this.btnInventory.Size = new System.Drawing.Size(97, 26);
-            this.btnInventory.TabIndex = 2;
-            this.btnInventory.Text = "Inventory";
-            this.btnInventory.UseVisualStyleBackColor = true;
+            labelWelcomeBig.AutoSize = true;
+            labelWelcomeBig.Font = new Font("Segoe UI", 36F, FontStyle.Bold, GraphicsUnit.Point);
+            labelWelcomeBig.Location = new Point(12, 150);
+            labelWelcomeBig.Margin = new Padding(0, 0, 3, 0);
+            labelWelcomeBig.Name = "labelWelcomeBig";
+            labelWelcomeBig.Size = new Size(237, 65);
+            labelWelcomeBig.TabIndex = 2;
+            labelWelcomeBig.Text = "Welcome";
+            labelWelcomeBig.TextAlign = ContentAlignment.MiddleLeft;
             // 
-            // buttonHome
+            // pictureBoxLogoBanner
             // 
-            this.buttonHome.Font = new System.Drawing.Font("Segoe UI", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
-            this.buttonHome.Location = new System.Drawing.Point(10, 10);
-            this.buttonHome.Name = "buttonHome";
-            this.buttonHome.Size = new System.Drawing.Size(97, 26);
-            this.buttonHome.TabIndex = 1;
-            this.buttonHome.Text = "Homepage";
-            this.buttonHome.UseVisualStyleBackColor = true;
+            pictureBoxLogoBanner.Image = (Image)resources.GetObject("pictureBoxLogoBanner.Image");
+            pictureBoxLogoBanner.Location = new Point(12, 392);
+            pictureBoxLogoBanner.Name = "pictureBoxLogoBanner";
+            pictureBoxLogoBanner.Size = new Size(375, 45);
+            pictureBoxLogoBanner.SizeMode = PictureBoxSizeMode.StretchImage;
+            pictureBoxLogoBanner.TabIndex = 3;
+            pictureBoxLogoBanner.TabStop = false;
             // 
-            // label1
+            // labelCopyright
             // 
-            this.label1.AutoSize = true;
-            this.label1.Font = new System.Drawing.Font("Segoe UI", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
-            this.label1.Location = new System.Drawing.Point(167, 114);
-            this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(402, 25);
-            this.label1.TabIndex = 1;
-            this.label1.Text = "Welcome to the Company Portal Homepage";
+            labelCopyright.AutoSize = true;
+            labelCopyright.Location = new Point(542, 422);
+            labelCopyright.Name = "labelCopyright";
+            labelCopyright.Size = new Size(188, 15);
+            labelCopyright.TabIndex = 4;
+            labelCopyright.Text = "© Australian Capital Territory 2026";
             // 
-            // label2
+            // labelWelcomeDC
             // 
-            this.label2.AutoSize = true;
-            this.label2.Font = new System.Drawing.Font("Segoe UI", 36F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
-            this.label2.Location = new System.Drawing.Point(251, 184);
-            this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(237, 65);
-            this.label2.TabIndex = 2;
-            this.label2.Text = "Welcome";
+            labelWelcomeDC.AutoSize = true;
+            labelWelcomeDC.Font = new Font("Segoe UI", 14.25F, FontStyle.Bold, GraphicsUnit.Point);
+            labelWelcomeDC.ForeColor = Color.DarkBlue;
+            labelWelcomeDC.Location = new Point(21, 215);
+            labelWelcomeDC.Name = "labelWelcomeDC";
+            labelWelcomeDC.Size = new Size(154, 25);
+            labelWelcomeDC.TabIndex = 5;
+            labelWelcomeDC.Text = "Dickson College";
             // 
             // UC_Home
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 15F);
-            this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.Controls.Add(this.label2);
-            this.Controls.Add(this.label1);
-            this.Controls.Add(this.panelNavigation);
-            this.Name = "UC_Home";
-            this.Size = new System.Drawing.Size(750, 450);
-            this.panelNavigation.ResumeLayout(false);
-            this.ResumeLayout(false);
-            this.PerformLayout();
+            AutoScaleDimensions = new SizeF(7F, 15F);
+            AutoScaleMode = AutoScaleMode.Font;
+            BackColor = SystemColors.ControlLight;
+            Controls.Add(labelWelcomeDC);
+            Controls.Add(labelCopyright);
+            Controls.Add(pictureBoxLogoBanner);
+            Controls.Add(labelWelcomeBig);
+            Controls.Add(labelWelcomeInfo);
+            Name = "UC_Home";
+            Size = new Size(750, 450);
+            ((System.ComponentModel.ISupportInitialize)pictureBoxLogoBanner).EndInit();
+            ResumeLayout(false);
+            PerformLayout();
 
         }
 
         #endregion
-
-        private Panel panelNavigation;
-        private Button buttonHome;
-        private Button btnInventory;
-        private Label label1;
-        private Label label2;
+        private Label labelWelcomeInfo;
+        private Label labelWelcomeBig;
+        private PictureBox pictureBoxLogoBanner;
+        private Label labelCopyright;
+        private Label labelWelcomeDC;
     }
 }

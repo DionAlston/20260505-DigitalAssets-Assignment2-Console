@@ -28,316 +28,276 @@
         /// </summary>
         private void InitializeComponent()
         {
-            this.components = new System.ComponentModel.Container();
-            this.btnAdd = new System.Windows.Forms.Button();
-            this.btnDelete = new System.Windows.Forms.Button();
-            this.btnClear = new System.Windows.Forms.Button();
-            this.txtName = new System.Windows.Forms.TextBox();
-            this.txtID = new System.Windows.Forms.TextBox();
-            this.txtPrice = new System.Windows.Forms.TextBox();
-            this.txtQuantity = new System.Windows.Forms.TextBox();
-            this.txtBrand = new System.Windows.Forms.TextBox();
-            this.btnUpdate = new System.Windows.Forms.Button();
-            this.labelName = new System.Windows.Forms.Label();
-            this.labelID = new System.Windows.Forms.Label();
-            this.labelPrice = new System.Windows.Forms.Label();
-            this.labelQuantity = new System.Windows.Forms.Label();
-            this.labelBrand = new System.Windows.Forms.Label();
-            this.panelNavigation = new System.Windows.Forms.Panel();
-            this.btnInventory = new System.Windows.Forms.Button();
-            this.buttonHome = new System.Windows.Forms.Button();
-            this.labelWelcome = new System.Windows.Forms.Label();
-            this.timer1 = new System.Windows.Forms.Timer(this.components);
-            this.panel1 = new System.Windows.Forms.Panel();
-            this.dgvInventory = new System.Windows.Forms.DataGridView();
-            this.txtDelete = new System.Windows.Forms.TextBox();
-            this.label1 = new System.Windows.Forms.Label();
-            this.label2 = new System.Windows.Forms.Label();
-            this.ProductID = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.ProductName = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.ProductBrand = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.ProductPrice = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.ProductQuantity = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.panelNavigation.SuspendLayout();
-            this.panel1.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.dgvInventory)).BeginInit();
-            this.SuspendLayout();
+            components = new System.ComponentModel.Container();
+            btnAdd = new Button();
+            btnDelete = new Button();
+            btnClear = new Button();
+            txtName = new TextBox();
+            txtID = new TextBox();
+            txtPrice = new TextBox();
+            txtQuantity = new TextBox();
+            txtBrand = new TextBox();
+            btnUpdate = new Button();
+            labelName = new Label();
+            labelID = new Label();
+            labelPrice = new Label();
+            labelQuantity = new Label();
+            labelBrand = new Label();
+            labelWelcome = new Label();
+            timer1 = new System.Windows.Forms.Timer(components);
+            panel1 = new Panel();
+            dgvInventory = new DataGridView();
+            ProductID = new DataGridViewTextBoxColumn();
+            ProductName = new DataGridViewTextBoxColumn();
+            ProductBrand = new DataGridViewTextBoxColumn();
+            ProductPrice = new DataGridViewTextBoxColumn();
+            ProductQuantity = new DataGridViewTextBoxColumn();
+            txtDelete = new TextBox();
+            label1 = new Label();
+            label2 = new Label();
+            panel1.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)dgvInventory).BeginInit();
+            SuspendLayout();
             // 
             // btnAdd
             // 
-            this.btnAdd.Location = new System.Drawing.Point(13, 263);
-            this.btnAdd.Name = "btnAdd";
-            this.btnAdd.Size = new System.Drawing.Size(78, 23);
-            this.btnAdd.TabIndex = 0;
-            this.btnAdd.Text = "Add";
-            this.btnAdd.UseVisualStyleBackColor = true;
+            btnAdd.Location = new Point(13, 263);
+            btnAdd.Name = "btnAdd";
+            btnAdd.Size = new Size(78, 23);
+            btnAdd.TabIndex = 0;
+            btnAdd.Text = "Add";
+            btnAdd.UseVisualStyleBackColor = true;
             // 
             // btnDelete
             // 
-            this.btnDelete.Font = new System.Drawing.Font("Segoe UI", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
-            this.btnDelete.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))));
-            this.btnDelete.Location = new System.Drawing.Point(157, 336);
-            this.btnDelete.Name = "btnDelete";
-            this.btnDelete.Size = new System.Drawing.Size(102, 23);
-            this.btnDelete.TabIndex = 1;
-            this.btnDelete.Text = "Delete";
-            this.btnDelete.UseVisualStyleBackColor = true;
+            btnDelete.Font = new Font("Segoe UI", 9F, FontStyle.Bold, GraphicsUnit.Point);
+            btnDelete.ForeColor = Color.FromArgb(192, 0, 0);
+            btnDelete.Location = new Point(157, 336);
+            btnDelete.Name = "btnDelete";
+            btnDelete.Size = new Size(102, 23);
+            btnDelete.TabIndex = 1;
+            btnDelete.Text = "Delete";
+            btnDelete.UseVisualStyleBackColor = true;
             // 
             // btnClear
             // 
-            this.btnClear.Location = new System.Drawing.Point(97, 263);
-            this.btnClear.Name = "btnClear";
-            this.btnClear.Size = new System.Drawing.Size(78, 23);
-            this.btnClear.TabIndex = 2;
-            this.btnClear.Text = "Clear";
-            this.btnClear.UseVisualStyleBackColor = true;
+            btnClear.Location = new Point(97, 263);
+            btnClear.Name = "btnClear";
+            btnClear.Size = new Size(78, 23);
+            btnClear.TabIndex = 2;
+            btnClear.Text = "Clear";
+            btnClear.UseVisualStyleBackColor = true;
             // 
             // txtName
             // 
-            this.txtName.Location = new System.Drawing.Point(62, 7);
-            this.txtName.Name = "txtName";
-            this.txtName.Size = new System.Drawing.Size(180, 23);
-            this.txtName.TabIndex = 3;
+            txtName.Location = new Point(62, 7);
+            txtName.Name = "txtName";
+            txtName.Size = new Size(180, 23);
+            txtName.TabIndex = 3;
             // 
             // txtID
             // 
-            this.txtID.Location = new System.Drawing.Point(62, 36);
-            this.txtID.Name = "txtID";
-            this.txtID.Size = new System.Drawing.Size(180, 23);
-            this.txtID.TabIndex = 4;
+            txtID.Location = new Point(62, 36);
+            txtID.Name = "txtID";
+            txtID.Size = new Size(180, 23);
+            txtID.TabIndex = 4;
             // 
             // txtPrice
             // 
-            this.txtPrice.Location = new System.Drawing.Point(62, 65);
-            this.txtPrice.Name = "txtPrice";
-            this.txtPrice.Size = new System.Drawing.Size(180, 23);
-            this.txtPrice.TabIndex = 6;
+            txtPrice.Location = new Point(62, 65);
+            txtPrice.Name = "txtPrice";
+            txtPrice.Size = new Size(180, 23);
+            txtPrice.TabIndex = 6;
             // 
             // txtQuantity
             // 
-            this.txtQuantity.Location = new System.Drawing.Point(62, 94);
-            this.txtQuantity.Name = "txtQuantity";
-            this.txtQuantity.Size = new System.Drawing.Size(180, 23);
-            this.txtQuantity.TabIndex = 7;
+            txtQuantity.Location = new Point(62, 94);
+            txtQuantity.Name = "txtQuantity";
+            txtQuantity.Size = new Size(180, 23);
+            txtQuantity.TabIndex = 7;
             // 
             // txtBrand
             // 
-            this.txtBrand.Location = new System.Drawing.Point(62, 123);
-            this.txtBrand.Name = "txtBrand";
-            this.txtBrand.Size = new System.Drawing.Size(180, 23);
-            this.txtBrand.TabIndex = 8;
+            txtBrand.Location = new Point(62, 123);
+            txtBrand.Name = "txtBrand";
+            txtBrand.Size = new Size(180, 23);
+            txtBrand.TabIndex = 8;
             // 
             // btnUpdate
             // 
-            this.btnUpdate.Location = new System.Drawing.Point(181, 263);
-            this.btnUpdate.Name = "btnUpdate";
-            this.btnUpdate.Size = new System.Drawing.Size(78, 23);
-            this.btnUpdate.TabIndex = 9;
-            this.btnUpdate.Text = "Update";
-            this.btnUpdate.UseVisualStyleBackColor = true;
+            btnUpdate.Location = new Point(181, 263);
+            btnUpdate.Name = "btnUpdate";
+            btnUpdate.Size = new Size(78, 23);
+            btnUpdate.TabIndex = 9;
+            btnUpdate.Text = "Update";
+            btnUpdate.UseVisualStyleBackColor = true;
             // 
             // labelName
             // 
-            this.labelName.AutoSize = true;
-            this.labelName.Location = new System.Drawing.Point(17, 10);
-            this.labelName.Name = "labelName";
-            this.labelName.Size = new System.Drawing.Size(39, 15);
-            this.labelName.TabIndex = 10;
-            this.labelName.Text = "Name";
+            labelName.AutoSize = true;
+            labelName.Location = new Point(17, 10);
+            labelName.Name = "labelName";
+            labelName.Size = new Size(39, 15);
+            labelName.TabIndex = 10;
+            labelName.Text = "Name";
             // 
             // labelID
             // 
-            this.labelID.AutoSize = true;
-            this.labelID.Location = new System.Drawing.Point(38, 39);
-            this.labelID.Name = "labelID";
-            this.labelID.Size = new System.Drawing.Size(18, 15);
-            this.labelID.TabIndex = 11;
-            this.labelID.Text = "ID";
+            labelID.AutoSize = true;
+            labelID.Location = new Point(38, 39);
+            labelID.Name = "labelID";
+            labelID.Size = new Size(18, 15);
+            labelID.TabIndex = 11;
+            labelID.Text = "ID";
             // 
             // labelPrice
             // 
-            this.labelPrice.AutoSize = true;
-            this.labelPrice.Location = new System.Drawing.Point(23, 68);
-            this.labelPrice.Name = "labelPrice";
-            this.labelPrice.Size = new System.Drawing.Size(33, 15);
-            this.labelPrice.TabIndex = 12;
-            this.labelPrice.Text = "Price";
+            labelPrice.AutoSize = true;
+            labelPrice.Location = new Point(23, 68);
+            labelPrice.Name = "labelPrice";
+            labelPrice.Size = new Size(33, 15);
+            labelPrice.TabIndex = 12;
+            labelPrice.Text = "Price";
             // 
             // labelQuantity
             // 
-            this.labelQuantity.AutoSize = true;
-            this.labelQuantity.Location = new System.Drawing.Point(3, 97);
-            this.labelQuantity.Name = "labelQuantity";
-            this.labelQuantity.Size = new System.Drawing.Size(53, 15);
-            this.labelQuantity.TabIndex = 13;
-            this.labelQuantity.Text = "Quantity";
+            labelQuantity.AutoSize = true;
+            labelQuantity.Location = new Point(3, 97);
+            labelQuantity.Name = "labelQuantity";
+            labelQuantity.Size = new Size(53, 15);
+            labelQuantity.TabIndex = 13;
+            labelQuantity.Text = "Quantity";
             // 
             // labelBrand
             // 
-            this.labelBrand.AutoSize = true;
-            this.labelBrand.Location = new System.Drawing.Point(18, 126);
-            this.labelBrand.Name = "labelBrand";
-            this.labelBrand.Size = new System.Drawing.Size(38, 15);
-            this.labelBrand.TabIndex = 14;
-            this.labelBrand.Text = "Brand";
-            // 
-            // panelNavigation
-            // 
-            this.panelNavigation.BackColor = System.Drawing.SystemColors.ControlDark;
-            this.panelNavigation.Controls.Add(this.btnInventory);
-            this.panelNavigation.Controls.Add(this.buttonHome);
-            this.panelNavigation.Location = new System.Drawing.Point(0, 0);
-            this.panelNavigation.Name = "panelNavigation";
-            this.panelNavigation.Size = new System.Drawing.Size(750, 45);
-            this.panelNavigation.TabIndex = 15;
-            // 
-            // btnInventory
-            // 
-            this.btnInventory.Font = new System.Drawing.Font("Segoe UI", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
-            this.btnInventory.Location = new System.Drawing.Point(113, 10);
-            this.btnInventory.Name = "btnInventory";
-            this.btnInventory.Size = new System.Drawing.Size(97, 26);
-            this.btnInventory.TabIndex = 3;
-            this.btnInventory.Text = "Inventory";
-            this.btnInventory.UseVisualStyleBackColor = true;
-            // 
-            // buttonHome
-            // 
-            this.buttonHome.Font = new System.Drawing.Font("Segoe UI", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
-            this.buttonHome.Location = new System.Drawing.Point(10, 10);
-            this.buttonHome.Name = "buttonHome";
-            this.buttonHome.Size = new System.Drawing.Size(97, 26);
-            this.buttonHome.TabIndex = 0;
-            this.buttonHome.Text = "Homepage";
-            this.buttonHome.UseVisualStyleBackColor = true;
+            labelBrand.AutoSize = true;
+            labelBrand.Location = new Point(18, 126);
+            labelBrand.Name = "labelBrand";
+            labelBrand.Size = new Size(38, 15);
+            labelBrand.TabIndex = 14;
+            labelBrand.Text = "Brand";
             // 
             // labelWelcome
             // 
-            this.labelWelcome.AutoSize = true;
-            this.labelWelcome.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
-            this.labelWelcome.Location = new System.Drawing.Point(225, 48);
-            this.labelWelcome.Name = "labelWelcome";
-            this.labelWelcome.Size = new System.Drawing.Size(300, 21);
-            this.labelWelcome.TabIndex = 16;
-            this.labelWelcome.Text = "Welcome to the Inventory Directorate";
+            labelWelcome.AutoSize = true;
+            labelWelcome.Font = new Font("Segoe UI", 12F, FontStyle.Bold, GraphicsUnit.Point);
+            labelWelcome.Location = new Point(224, 32);
+            labelWelcome.Name = "labelWelcome";
+            labelWelcome.Size = new Size(300, 21);
+            labelWelcome.TabIndex = 16;
+            labelWelcome.Text = "Welcome to the Inventory Directorate";
             // 
             // timer1
             // 
-            this.timer1.Enabled = true;
-            this.timer1.Interval = 50;
-            this.timer1.Tick += new System.EventHandler(this.timer1_Tick);
+            timer1.Enabled = true;
+            timer1.Interval = 50;
+            timer1.Tick += timer1_Tick;
             // 
             // panel1
             // 
-            this.panel1.BackColor = System.Drawing.SystemColors.AppWorkspace;
-            this.panel1.Controls.Add(this.labelName);
-            this.panel1.Controls.Add(this.txtName);
-            this.panel1.Controls.Add(this.txtID);
-            this.panel1.Controls.Add(this.labelBrand);
-            this.panel1.Controls.Add(this.txtPrice);
-            this.panel1.Controls.Add(this.labelQuantity);
-            this.panel1.Controls.Add(this.txtQuantity);
-            this.panel1.Controls.Add(this.labelPrice);
-            this.panel1.Controls.Add(this.txtBrand);
-            this.panel1.Controls.Add(this.labelID);
-            this.panel1.Location = new System.Drawing.Point(10, 100);
-            this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(256, 157);
-            this.panel1.TabIndex = 17;
+            panel1.BackColor = SystemColors.AppWorkspace;
+            panel1.Controls.Add(labelName);
+            panel1.Controls.Add(txtName);
+            panel1.Controls.Add(txtID);
+            panel1.Controls.Add(labelBrand);
+            panel1.Controls.Add(txtPrice);
+            panel1.Controls.Add(labelQuantity);
+            panel1.Controls.Add(txtQuantity);
+            panel1.Controls.Add(labelPrice);
+            panel1.Controls.Add(txtBrand);
+            panel1.Controls.Add(labelID);
+            panel1.Location = new Point(10, 100);
+            panel1.Name = "panel1";
+            panel1.Size = new Size(256, 157);
+            panel1.TabIndex = 17;
             // 
             // dgvInventory
             // 
-            this.dgvInventory.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dgvInventory.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
-            this.ProductID,
-            this.ProductName,
-            this.ProductBrand,
-            this.ProductPrice,
-            this.ProductQuantity});
-            this.dgvInventory.Location = new System.Drawing.Point(284, 72);
-            this.dgvInventory.Name = "dgvInventory";
-            this.dgvInventory.RowTemplate.Height = 25;
-            this.dgvInventory.Size = new System.Drawing.Size(443, 361);
-            this.dgvInventory.TabIndex = 18;
-            // 
-            // txtDelete
-            // 
-            this.txtDelete.Location = new System.Drawing.Point(10, 337);
-            this.txtDelete.Name = "txtDelete";
-            this.txtDelete.Size = new System.Drawing.Size(136, 23);
-            this.txtDelete.TabIndex = 19;
-            this.txtDelete.TextChanged += new System.EventHandler(this.textBox1_TextChanged_1);
-            // 
-            // label1
-            // 
-            this.label1.AutoSize = true;
-            this.label1.Location = new System.Drawing.Point(48, 82);
-            this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(181, 15);
-            this.label1.TabIndex = 20;
-            this.label1.Text = "Add or Edit Product in Catalogue";
-            this.label1.Click += new System.EventHandler(this.label1_Click);
-            // 
-            // label2
-            // 
-            this.label2.AutoSize = true;
-            this.label2.Location = new System.Drawing.Point(28, 319);
-            this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(220, 15);
-            this.label2.TabIndex = 21;
-            this.label2.Text = "Delete a Catalogue listing by ID or Name";
+            dgvInventory.ColumnHeadersHeightSizeMode = DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            dgvInventory.Columns.AddRange(new DataGridViewColumn[] { ProductID, ProductName, ProductBrand, ProductPrice, ProductQuantity });
+            dgvInventory.Location = new Point(284, 72);
+            dgvInventory.Name = "dgvInventory";
+            dgvInventory.RowTemplate.Height = 25;
+            dgvInventory.Size = new Size(443, 361);
+            dgvInventory.TabIndex = 18;
+            dgvInventory.CellContentClick += dgvInventory_CellContentClick;
             // 
             // ProductID
             // 
-            this.ProductID.HeaderText = "ID";
-            this.ProductID.Name = "ProductID";
-            this.ProductID.Width = 50;
+            ProductID.HeaderText = "ID";
+            ProductID.Name = "ProductID";
+            ProductID.Width = 50;
             // 
             // ProductName
             // 
-            this.ProductName.HeaderText = "Name";
-            this.ProductName.Name = "ProductName";
+            ProductName.HeaderText = "Name";
+            ProductName.Name = "ProductName";
             // 
             // ProductBrand
             // 
-            this.ProductBrand.HeaderText = "Brand";
-            this.ProductBrand.Name = "ProductBrand";
+            ProductBrand.HeaderText = "Brand";
+            ProductBrand.Name = "ProductBrand";
             // 
             // ProductPrice
             // 
-            this.ProductPrice.HeaderText = "Price";
-            this.ProductPrice.Name = "ProductPrice";
+            ProductPrice.HeaderText = "Price";
+            ProductPrice.Name = "ProductPrice";
             // 
             // ProductQuantity
             // 
-            this.ProductQuantity.HeaderText = "Qty";
-            this.ProductQuantity.Name = "ProductQuantity";
-            this.ProductQuantity.Width = 50;
+            ProductQuantity.HeaderText = "Qty";
+            ProductQuantity.Name = "ProductQuantity";
+            ProductQuantity.Width = 50;
+            // 
+            // txtDelete
+            // 
+            txtDelete.Location = new Point(10, 337);
+            txtDelete.Name = "txtDelete";
+            txtDelete.Size = new Size(136, 23);
+            txtDelete.TabIndex = 19;
+            txtDelete.TextChanged += textBox1_TextChanged_1;
+            // 
+            // label1
+            // 
+            label1.AutoSize = true;
+            label1.Location = new Point(48, 82);
+            label1.Name = "label1";
+            label1.Size = new Size(181, 15);
+            label1.TabIndex = 20;
+            label1.Text = "Add or Edit Product in Catalogue";
+            label1.Click += label1_Click;
+            // 
+            // label2
+            // 
+            label2.AutoSize = true;
+            label2.Location = new Point(28, 319);
+            label2.Name = "label2";
+            label2.Size = new Size(220, 15);
+            label2.TabIndex = 21;
+            label2.Text = "Delete a Catalogue listing by ID or Name";
             // 
             // UC_Inventory
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 15F);
-            this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.Controls.Add(this.label2);
-            this.Controls.Add(this.label1);
-            this.Controls.Add(this.txtDelete);
-            this.Controls.Add(this.dgvInventory);
-            this.Controls.Add(this.panel1);
-            this.Controls.Add(this.labelWelcome);
-            this.Controls.Add(this.panelNavigation);
-            this.Controls.Add(this.btnUpdate);
-            this.Controls.Add(this.btnClear);
-            this.Controls.Add(this.btnDelete);
-            this.Controls.Add(this.btnAdd);
-            this.Name = "UC_Inventory";
-            this.Size = new System.Drawing.Size(750, 450);
-            this.Load += new System.EventHandler(this.UC_Inventory_Load);
-            this.panelNavigation.ResumeLayout(false);
-            this.panel1.ResumeLayout(false);
-            this.panel1.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.dgvInventory)).EndInit();
-            this.ResumeLayout(false);
-            this.PerformLayout();
+            AutoScaleDimensions = new SizeF(7F, 15F);
+            AutoScaleMode = AutoScaleMode.Font;
+            Controls.Add(label2);
+            Controls.Add(label1);
+            Controls.Add(txtDelete);
+            Controls.Add(dgvInventory);
+            Controls.Add(panel1);
+            Controls.Add(labelWelcome);
+            Controls.Add(btnUpdate);
+            Controls.Add(btnClear);
+            Controls.Add(btnDelete);
+            Controls.Add(btnAdd);
+            Name = "UC_Inventory";
+            Size = new Size(750, 450);
+            Load += UC_Inventory_Load;
+            panel1.ResumeLayout(false);
+            panel1.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)dgvInventory).EndInit();
+            ResumeLayout(false);
+            PerformLayout();
 
         }
 
@@ -357,12 +317,9 @@
         private Label labelPrice;
         private Label labelQuantity;
         private Label labelBrand;
-        private Panel panelNavigation;
         private Label labelWelcome;
-        private Button buttonHome;
         private System.Windows.Forms.Timer timer1;
         private Panel panel1;
-        private Button btnInventory;
         private DataGridView dgvInventory;
         private TextBox txtDelete;
         private Label label1;

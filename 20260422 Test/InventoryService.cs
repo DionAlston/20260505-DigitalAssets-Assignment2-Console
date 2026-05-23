@@ -14,8 +14,8 @@ namespace _20260422_Test
             List<Product> products = new List<Product>();
 
             if (!File.Exists(filePath)) return products;
-
-            var lines = File.ReadAllLines(filePath).Skip(1);                //Reads all lines
+                
+            var lines = File.ReadAllLines(filePath).Skip(1);                  // Reads all lines
 
             foreach (string line in lines)
             {
@@ -25,11 +25,11 @@ namespace _20260422_Test
                 {
                     try
                     {
-                        int id = int.Parse(parts[0]);                         //Takes line from first comma and turns it into a string
+                        int id = int.Parse(parts[0]);                         // Takes line from first comma and turns it into a string
                         string name = parts[1];
                         string brand = parts[2];
-                        decimal price = decimal.Parse(parts[3]) / 100m;     // Whatever in CSV file converts to decimal with dot decided by 100 converted into decimal figure with dot
-                        int quantity = 0;                                   // Initialise every product into 0 quantity
+                        decimal price = decimal.Parse(parts[3]) / 100m;       // Whatever in CSV file converts to decimal with dot decided by 100 converted into decimal figure with dot
+                        int quantity = 0;                                     // Initialise every product into 0 quantity
 
                         products.Add(new Product(id, name, brand, price, quantity));
 
@@ -40,7 +40,7 @@ namespace _20260422_Test
                     }
                 }
             }
-            return products;                                                // Will return list
+            return products;                                                  // Will return list
         }
 
 
@@ -48,7 +48,7 @@ namespace _20260422_Test
 
             using (StreamWriter writer = new StreamWriter(filepath))
             {
-                writer.WriteLine("ProductID, ProductName, ProductBrand, Price, Quantity");                                    //Very important - will not be able to save without matching columns
+                writer.WriteLine("ProductID, ProductName, ProductBrand, Price, Quantity");                                    // Very important - will not be able to save without matching columns
                 {
                     foreach (var p in products)
                     {
@@ -62,3 +62,7 @@ namespace _20260422_Test
 }
     // NOTE 17/05
     // Configure the CSV file
+
+
+
+// tofu from buttumak 식당 sunday???

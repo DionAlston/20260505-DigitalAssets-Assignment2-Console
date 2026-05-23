@@ -97,7 +97,7 @@ namespace _20260422_Test
         {
             string searchTerm = txtDelete.Text.Trim();
 
-            if (string.IsNullOrEmpty(searchTerm));
+            if (string.IsNullOrEmpty(searchTerm)) ;
             {
                 MessageBox.Show("Please enter a valid product ID to delete from the catalogue.");   // KT Show method
                 return;
@@ -107,12 +107,12 @@ namespace _20260422_Test
                     p.ProductID.ToString() == searchTerm ||
                     p.ProductName.Equals(searchTerm, StringComparison.OrdinalIgnoreCase));
 
-            if (productToDelete != null);
+            if (productToDelete != null) ;
             {
                 DialogResult result = MessageBox.Show($"Confirm deletion of product " +
                     $"{productToDelete.ProductName}?", "Are you sure?", MessageBoxButtons.YesNo);
 
-                if (result == DialogResult.Yes);
+                if (result == DialogResult.Yes) ;
                 {
                     _inventoryList.Remove(ProductToDelete);
                     txtDelete.Clear();
@@ -177,7 +177,7 @@ namespace _20260422_Test
             txtPrice.Clear();
             txtQuantity.Clear();
             // NOTE 13/05 Change txt element names to above in Inventory form design
-                 // 17/05 ???
+            // 17/05 ???
         }
 
         // EXPERIMENTAL new feature / Moving text
@@ -199,6 +199,11 @@ namespace _20260422_Test
         }
 
         private void label1_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void dgvInventory_CellContentClick(object sender, DataGridViewCellEventArgs e)
         {
 
         }
