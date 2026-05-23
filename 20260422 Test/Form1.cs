@@ -5,6 +5,10 @@ namespace _20260422_Test
         public Form1()
         {
             InitializeComponent();
+
+            btnHome.Click += btnHome_Click;
+            ShowScreen(new UC_Home());
+
         }
 
         // Button click events for UC/Home and Inventory from panelNav stimulus
@@ -30,6 +34,11 @@ namespace _20260422_Test
             panelContent.Controls.Clear();           // Clear the controls
             newScreen.Dock = DockStyle.Fill;         // Set Dock to Fill
             panelContent.Controls.Add(newScreen);    // Add the UC to PanelContent
+        }
+
+        private void panelContent_Paint(object sender, PaintEventArgs e)    // ???
+        {
+
         }
     }
 }

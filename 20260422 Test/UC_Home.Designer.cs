@@ -42,7 +42,7 @@
             labelWelcomeInfo.AutoSize = true;
             labelWelcomeInfo.Font = new Font("Segoe UI", 14.25F, FontStyle.Bold, GraphicsUnit.Point);
             labelWelcomeInfo.ForeColor = SystemColors.ControlText;
-            labelWelcomeInfo.Location = new Point(21, 240);
+            labelWelcomeInfo.Location = new Point(21, 203);
             labelWelcomeInfo.Name = "labelWelcomeInfo";
             labelWelcomeInfo.Size = new Size(550, 25);
             labelWelcomeInfo.TabIndex = 1;
@@ -52,7 +52,7 @@
             // 
             labelWelcomeBig.AutoSize = true;
             labelWelcomeBig.Font = new Font("Segoe UI", 36F, FontStyle.Bold, GraphicsUnit.Point);
-            labelWelcomeBig.Location = new Point(12, 150);
+            labelWelcomeBig.Location = new Point(12, 113);
             labelWelcomeBig.Margin = new Padding(0, 0, 3, 0);
             labelWelcomeBig.Name = "labelWelcomeBig";
             labelWelcomeBig.Size = new Size(237, 65);
@@ -63,7 +63,7 @@
             // pictureBoxLogoBanner
             // 
             pictureBoxLogoBanner.Image = (Image)resources.GetObject("pictureBoxLogoBanner.Image");
-            pictureBoxLogoBanner.Location = new Point(15, 390);
+            pictureBoxLogoBanner.Location = new Point(12, 322);
             pictureBoxLogoBanner.Name = "pictureBoxLogoBanner";
             pictureBoxLogoBanner.Size = new Size(375, 45);
             pictureBoxLogoBanner.SizeMode = PictureBoxSizeMode.StretchImage;
@@ -73,7 +73,7 @@
             // labelCopyright
             // 
             labelCopyright.AutoSize = true;
-            labelCopyright.Location = new Point(545, 420);
+            labelCopyright.Location = new Point(544, 352);
             labelCopyright.Name = "labelCopyright";
             labelCopyright.Size = new Size(188, 15);
             labelCopyright.TabIndex = 4;
@@ -84,7 +84,7 @@
             labelWelcomeDC.AutoSize = true;
             labelWelcomeDC.Font = new Font("Segoe UI", 14.25F, FontStyle.Bold, GraphicsUnit.Point);
             labelWelcomeDC.ForeColor = Color.DarkBlue;
-            labelWelcomeDC.Location = new Point(21, 215);
+            labelWelcomeDC.Location = new Point(21, 178);
             labelWelcomeDC.Name = "labelWelcomeDC";
             labelWelcomeDC.Size = new Size(154, 25);
             labelWelcomeDC.TabIndex = 5;
@@ -101,7 +101,7 @@
             Controls.Add(labelWelcomeBig);
             Controls.Add(labelWelcomeInfo);
             Name = "UC_Home";
-            Size = new Size(750, 450);
+            Size = new Size(735, 375);
             ((System.ComponentModel.ISupportInitialize)pictureBoxLogoBanner).EndInit();
             ResumeLayout(false);
             PerformLayout();

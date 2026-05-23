@@ -29,38 +29,23 @@
         private void InitializeComponent()
         {
             panelContent = new Panel();
-            panelNavigation = new Panel();
             btnInventory = new Button();
-            buttonHome = new Button();
-            panelContent.SuspendLayout();
-            panelNavigation.SuspendLayout();
+            btnHome = new Button();
             SuspendLayout();
             // 
             // panelContent
             // 
-            panelContent.BackColor = SystemColors.ActiveCaption;
-            panelContent.Controls.Add(panelNavigation);
-            panelContent.Dock = DockStyle.Fill;
-            panelContent.Location = new Point(0, 0);
+            panelContent.BackColor = SystemColors.ControlLight;
+            panelContent.Location = new Point(0, 35);
             panelContent.Name = "panelContent";
-            panelContent.Size = new Size(734, 411);
+            panelContent.Size = new Size(735, 375);
             panelContent.TabIndex = 0;
-            // 
-            // panelNavigation
-            // 
-            panelNavigation.BackColor = SystemColors.ControlDark;
-            panelNavigation.Controls.Add(btnInventory);
-            panelNavigation.Controls.Add(buttonHome);
-            panelNavigation.Dock = DockStyle.Top;
-            panelNavigation.Location = new Point(0, 0);
-            panelNavigation.Name = "panelNavigation";
-            panelNavigation.Size = new Size(734, 45);
-            panelNavigation.TabIndex = 16;
+            panelContent.Paint += panelContent_Paint;
             // 
             // btnInventory
             // 
             btnInventory.Font = new Font("Segoe UI", 9F, FontStyle.Bold, GraphicsUnit.Point);
-            btnInventory.Location = new Point(113, 10);
+            btnInventory.Location = new Point(115, 3);
             btnInventory.Name = "btnInventory";
             btnInventory.Size = new Size(97, 26);
             btnInventory.TabIndex = 3;
@@ -68,26 +53,27 @@
             btnInventory.UseVisualStyleBackColor = true;
             btnInventory.Click += btnInventory_Click;
             // 
-            // buttonHome
+            // btnHome
             // 
-            buttonHome.Font = new Font("Segoe UI", 9F, FontStyle.Bold, GraphicsUnit.Point);
-            buttonHome.Location = new Point(10, 10);
-            buttonHome.Name = "buttonHome";
-            buttonHome.Size = new Size(97, 26);
-            buttonHome.TabIndex = 0;
-            buttonHome.Text = "Homepage";
-            buttonHome.UseVisualStyleBackColor = true;
+            btnHome.Font = new Font("Segoe UI", 9F, FontStyle.Bold, GraphicsUnit.Point);
+            btnHome.Location = new Point(12, 3);
+            btnHome.Name = "btnHome";
+            btnHome.Size = new Size(97, 26);
+            btnHome.TabIndex = 4;
+            btnHome.Text = "Home";
+            btnHome.UseVisualStyleBackColor = true;
             // 
             // Form1
             // 
             AutoScaleDimensions = new SizeF(7F, 15F);
             AutoScaleMode = AutoScaleMode.Font;
+            BackColor = SystemColors.ControlLight;
             ClientSize = new Size(734, 411);
+            Controls.Add(btnHome);
             Controls.Add(panelContent);
+            Controls.Add(btnInventory);
             Name = "Form1";
             Text = "Form1";
-            panelContent.ResumeLayout(false);
-            panelNavigation.ResumeLayout(false);
             ResumeLayout(false);
 
         }
@@ -95,8 +81,7 @@
         #endregion
 
         private Panel panelContent;
-        private Panel panelNavigation;
         private Button btnInventory;
-        private Button buttonHome;
+        private Button btnHome;
     }
 }

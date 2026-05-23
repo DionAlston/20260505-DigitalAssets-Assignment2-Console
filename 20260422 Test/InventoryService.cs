@@ -11,9 +11,9 @@ namespace _20260422_Test
     {
         public static List<Product> LoadFromCSV(string filePath)
         {
-            List<Product> products = new List<Product>();
+            List<Product> Products = new List<Product>();
 
-            if (!File.Exists(filePath)) return products;
+            if (!File.Exists(filePath)) return Products;
                 
             var lines = File.ReadAllLines(filePath).Skip(1);                  // Reads all lines
 
@@ -31,7 +31,7 @@ namespace _20260422_Test
                         decimal price = decimal.Parse(parts[3]) / 100m;       // Whatever in CSV file converts to decimal with dot decided by 100 converted into decimal figure with dot
                         int quantity = 0;                                     // Initialise every product into 0 quantity
 
-                        products.Add(new Product(id, name, brand, price, quantity));
+                        Products.Add(new Product(id, name, brand, price, quantity));
 
                     }
                     catch (Exception e)
@@ -40,17 +40,17 @@ namespace _20260422_Test
                     }
                 }
             }
-            return products;                                                  // Will return list
+            return Products;                                                  // Will return list
         }
 
 
-        public static void SaveToCSV(string filepath, List<Product> products) {
+        public static void SaveToCSV(string filepath, List<Product> Products) {
 
             using (StreamWriter writer = new StreamWriter(filepath))
             {
-                writer.WriteLine("ProductID, ProductName, ProductBrand, Price, Quantity");                                    // Very important - will not be able to save without matching columns
+                writer.WriteLine("ProductID,ProductName,ProductBrand,Price,Quantity");                                    // Very important - will not be able to save without matching columns
                 {
-                    foreach (var p in products)
+                    foreach (var p in Products)
                     {
                         string line = $"{p.ProductID},{p.ProductName},{p.ProductBrand},{p.ProductPrice * 100},{p.ProductQuantity}";   // Line could be seperated
                         writer.WriteLine(line);

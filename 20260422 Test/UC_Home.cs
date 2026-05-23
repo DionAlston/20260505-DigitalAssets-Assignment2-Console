@@ -17,6 +17,4 @@ namespace _20260422_Test
             InitializeComponent();
         }
     }
-
-
 }

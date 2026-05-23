@@ -47,14 +47,14 @@
             timer1 = new System.Windows.Forms.Timer(components);
             panel1 = new Panel();
             dgvInventory = new DataGridView();
-            txtDelete = new TextBox();
-            label1 = new Label();
-            label2 = new Label();
             ProductID = new DataGridViewTextBoxColumn();
             ProductName = new DataGridViewTextBoxColumn();
             ProductBrand = new DataGridViewTextBoxColumn();
-            ProductPrice = new DataGridViewTextBoxColumn();
-            ProductQuantity = new DataGridViewTextBoxColumn();
+            Price = new DataGridViewTextBoxColumn();
+            Quantity = new DataGridViewTextBoxColumn();
+            txtDelete = new TextBox();
+            label1 = new Label();
+            label2 = new Label();
             panel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)dgvInventory).BeginInit();
             SuspendLayout();
@@ -181,16 +181,17 @@
             // 
             labelWelcome.AutoSize = true;
             labelWelcome.Font = new Font("Segoe UI", 12F, FontStyle.Bold, GraphicsUnit.Point);
-            labelWelcome.Location = new Point(224, 15);
+            labelWelcome.Location = new Point(210, 12);
             labelWelcome.Name = "labelWelcome";
             labelWelcome.Size = new Size(292, 21);
             labelWelcome.TabIndex = 16;
             labelWelcome.Text = "Welcome to the Inventory Catalogue";
+            labelWelcome.Click += labelWelcome_Click;
             // 
             // timer1
             // 
             timer1.Enabled = true;
-            timer1.Interval = 50;
+            timer1.Interval = 25;
             timer1.Tick += timer1_Tick;
             // 
             // panel1
@@ -214,13 +215,44 @@
             // dgvInventory
             // 
             dgvInventory.ColumnHeadersHeightSizeMode = DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            dgvInventory.Columns.AddRange(new DataGridViewColumn[] { ProductID, ProductName, ProductBrand, ProductPrice, ProductQuantity });
-            dgvInventory.Location = new Point(284, 50);
+            dgvInventory.Columns.AddRange(new DataGridViewColumn[] { ProductID, ProductName, ProductBrand, Price, Quantity });
+            dgvInventory.Location = new Point(282, 36);
             dgvInventory.Name = "dgvInventory";
+            dgvInventory.ReadOnly = true;
             dgvInventory.RowTemplate.Height = 25;
-            dgvInventory.Size = new Size(443, 383);
+            dgvInventory.Size = new Size(443, 324);
             dgvInventory.TabIndex = 18;
             dgvInventory.CellContentClick += dgvInventory_CellContentClick;
+            // 
+            // ProductID
+            // 
+            ProductID.HeaderText = "ID";
+            ProductID.Name = "ProductID";
+            ProductID.ReadOnly = true;
+            // 
+            // ProductName
+            // 
+            ProductName.HeaderText = "Name";
+            ProductName.Name = "ProductName";
+            ProductName.ReadOnly = true;
+            // 
+            // ProductBrand
+            // 
+            ProductBrand.HeaderText = "Brand";
+            ProductBrand.Name = "ProductBrand";
+            ProductBrand.ReadOnly = true;
+            // 
+            // Price
+            // 
+            Price.HeaderText = "Price";
+            Price.Name = "Price";
+            Price.ReadOnly = true;
+            // 
+            // Quantity
+            // 
+            Quantity.HeaderText = "Qty";
+            Quantity.Name = "Quantity";
+            Quantity.ReadOnly = true;
             // 
             // txtDelete
             // 
@@ -249,33 +281,6 @@
             label2.TabIndex = 21;
             label2.Text = "Delete a Catalogue listing by ID or Name";
             // 
-            // ProductID
-            // 
-            ProductID.HeaderText = "ID";
-            ProductID.Name = "ProductID";
-            ProductID.Width = 50;
-            // 
-            // ProductName
-            // 
-            ProductName.HeaderText = "Name";
-            ProductName.Name = "ProductName";
-            // 
-            // ProductBrand
-            // 
-            ProductBrand.HeaderText = "Brand";
-            ProductBrand.Name = "ProductBrand";
-            // 
-            // ProductPrice
-            // 
-            ProductPrice.HeaderText = "Unit Price";
-            ProductPrice.Name = "ProductPrice";
-            // 
-            // ProductQuantity
-            // 
-            ProductQuantity.HeaderText = "Qty";
-            ProductQuantity.Name = "ProductQuantity";
-            ProductQuantity.Width = 50;
-            // 
             // UC_Inventory
             // 
             AutoScaleDimensions = new SizeF(7F, 15F);
@@ -291,7 +296,7 @@
             Controls.Add(btnDelete);
             Controls.Add(btnAdd);
             Name = "UC_Inventory";
-            Size = new Size(750, 450);
+            Size = new Size(735, 375);
             Load += UC_Inventory_Load;
             panel1.ResumeLayout(false);
             panel1.PerformLayout();
@@ -327,7 +332,7 @@
         private DataGridViewTextBoxColumn ProductID;
         private DataGridViewTextBoxColumn ProductName;
         private DataGridViewTextBoxColumn ProductBrand;
-        private DataGridViewTextBoxColumn ProductPrice;
-        private DataGridViewTextBoxColumn ProductQuantity;
+        private DataGridViewTextBoxColumn Price;
+        private DataGridViewTextBoxColumn Quantity;
     }
 }

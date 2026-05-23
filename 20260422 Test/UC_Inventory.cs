@@ -208,5 +208,10 @@ namespace _20260422_Test
         {
 
         }
+
+        private void labelWelcome_Click(object sender, EventArgs e)
+        {
+
+        }
     }
 }
