@@ -24,7 +24,7 @@ namespace _20260422_Test
         private BindingList<Product> _inventoryList = new BindingList<Product>();
         private BindingSource _bindingSource = new BindingSource();
 
-        string filePath = "./inventory.csv"; // What CSV file name?
+        string filePath = "./Products.csv";
 
 
         // For loading of UC_Inventory
@@ -97,7 +97,7 @@ namespace _20260422_Test
         {
             string searchTerm = txtDelete.Text.Trim();
 
-            if (string.IsNullOrEmpty(searchTerm)) ;
+            if (string.IsNullOrEmpty(searchTerm))
             {
                 MessageBox.Show("Please enter a valid product ID to delete from the catalogue.");   // KT Show method
                 return;
@@ -107,22 +107,22 @@ namespace _20260422_Test
                     p.ProductID.ToString() == searchTerm ||
                     p.ProductName.Equals(searchTerm, StringComparison.OrdinalIgnoreCase));
 
-            if (productToDelete != null) ;
+            if (productToDelete != null)
             {
                 DialogResult result = MessageBox.Show($"Confirm deletion of product " +
                     $"{productToDelete.ProductName}?", "Are you sure?", MessageBoxButtons.YesNo);
 
-                if (result == DialogResult.Yes) ;
+                if (result == DialogResult.Yes)
                 {
                     _inventoryList.Remove(productToDelete);
                     txtDelete.Clear();
                     MessageBox.Show("Product Deleted from catalogue.");
 
+                }
 
                 else
-                    {
-                        MessageBox.Show("No Product found in the catalogue.");
-                    }
+                {
+                    MessageBox.Show("No Product found in the catalogue.");
                 }
             }
         }
