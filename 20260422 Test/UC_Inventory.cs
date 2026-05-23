@@ -101,7 +101,7 @@ namespace _20260422_Test
             {
                 MessageBox.Show("Please enter a valid product ID to delete from the catalogue.");   // KT Show method
                 return;
-            } // NOTE Bindinglist for auto refresh function w/ user inputs
+            }                                                                                       // NOTE Bindinglist for auto refresh function w/ user inputs
 
             Product productToDelete = _inventoryList.FirstOrDefault(p =>
                     p.ProductID.ToString() == searchTerm ||
@@ -117,11 +117,12 @@ namespace _20260422_Test
                     _inventoryList.Remove(productToDelete);
                     txtDelete.Clear();
                     MessageBox.Show("Product Deleted from catalogue.");
-                }
+
 
                 else
-                {
-                    MessageBox.Show("No Product found in the catalogue.");
+                    {
+                        MessageBox.Show("No Product found in the catalogue.");
+                    }
                 }
             }
         }
