@@ -181,11 +181,11 @@
             // 
             labelWelcome.AutoSize = true;
             labelWelcome.Font = new Font("Segoe UI", 12F, FontStyle.Bold, GraphicsUnit.Point);
-            labelWelcome.Location = new Point(224, 32);
+            labelWelcome.Location = new Point(232, 36);
             labelWelcome.Name = "labelWelcome";
-            labelWelcome.Size = new Size(300, 21);
+            labelWelcome.Size = new Size(292, 21);
             labelWelcome.TabIndex = 16;
-            labelWelcome.Text = "Welcome to the Inventory Directorate";
+            labelWelcome.Text = "Welcome to the Inventory Catalogue";
             // 
             // timer1
             // 

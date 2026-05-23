@@ -63,7 +63,7 @@
             // pictureBoxLogoBanner
             // 
             pictureBoxLogoBanner.Image = (Image)resources.GetObject("pictureBoxLogoBanner.Image");
-            pictureBoxLogoBanner.Location = new Point(12, 392);
+            pictureBoxLogoBanner.Location = new Point(15, 390);
             pictureBoxLogoBanner.Name = "pictureBoxLogoBanner";
             pictureBoxLogoBanner.Size = new Size(375, 45);
             pictureBoxLogoBanner.SizeMode = PictureBoxSizeMode.StretchImage;
@@ -73,7 +73,7 @@
             // labelCopyright
             // 
             labelCopyright.AutoSize = true;
-            labelCopyright.Location = new Point(542, 422);
+            labelCopyright.Location = new Point(545, 420);
             labelCopyright.Name = "labelCopyright";
             labelCopyright.Size = new Size(188, 15);
             labelCopyright.TabIndex = 4;

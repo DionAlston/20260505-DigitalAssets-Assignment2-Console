@@ -114,7 +114,7 @@ namespace _20260422_Test
 
                 if (result == DialogResult.Yes) ;
                 {
-                    _inventoryList.Remove(ProductToDelete);
+                    _inventoryList.Remove(productToDelete);
                     txtDelete.Clear();
                     MessageBox.Show("Product Deleted from catalogue.");
                 }
