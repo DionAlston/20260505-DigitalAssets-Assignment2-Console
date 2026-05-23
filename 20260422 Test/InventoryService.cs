@@ -60,9 +60,3 @@ namespace _20260422_Test
         }
     }
 }
-    // NOTE 17/05
-    // Configure the CSV file
-
-
-
-// tofu from buttumak 식당 sunday???
