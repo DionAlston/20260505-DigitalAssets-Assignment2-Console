@@ -55,13 +55,14 @@
             txtDelete = new TextBox();
             label1 = new Label();
             label2 = new Label();
+            btnSave = new Button();
             panel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)dgvInventory).BeginInit();
             SuspendLayout();
             // 
             // btnAdd
             // 
-            btnAdd.Location = new Point(13, 263);
+            btnAdd.Location = new Point(10, 217);
             btnAdd.Name = "btnAdd";
             btnAdd.Size = new Size(78, 23);
             btnAdd.TabIndex = 0;
@@ -73,7 +74,7 @@
             // 
             btnDelete.Font = new Font("Segoe UI", 9F, FontStyle.Bold, GraphicsUnit.Point);
             btnDelete.ForeColor = Color.FromArgb(192, 0, 0);
-            btnDelete.Location = new Point(157, 337);
+            btnDelete.Location = new Point(157, 289);
             btnDelete.Name = "btnDelete";
             btnDelete.Size = new Size(102, 23);
             btnDelete.TabIndex = 1;
@@ -82,7 +83,7 @@
             // 
             // btnClear
             // 
-            btnClear.Location = new Point(97, 263);
+            btnClear.Location = new Point(94, 217);
             btnClear.Name = "btnClear";
             btnClear.Size = new Size(78, 23);
             btnClear.TabIndex = 2;
@@ -126,7 +127,7 @@
             // 
             // btnUpdate
             // 
-            btnUpdate.Location = new Point(181, 263);
+            btnUpdate.Location = new Point(178, 217);
             btnUpdate.Name = "btnUpdate";
             btnUpdate.Size = new Size(78, 23);
             btnUpdate.TabIndex = 9;
@@ -208,7 +209,7 @@
             panel1.Controls.Add(labelPrice);
             panel1.Controls.Add(txtBrand);
             panel1.Controls.Add(labelID);
-            panel1.Location = new Point(10, 100);
+            panel1.Location = new Point(10, 54);
             panel1.Name = "panel1";
             panel1.Size = new Size(256, 157);
             panel1.TabIndex = 17;
@@ -257,7 +258,7 @@
             // 
             // txtDelete
             // 
-            txtDelete.Location = new Point(10, 337);
+            txtDelete.Location = new Point(13, 289);
             txtDelete.Name = "txtDelete";
             txtDelete.Size = new Size(141, 23);
             txtDelete.TabIndex = 19;
@@ -266,7 +267,7 @@
             // label1
             // 
             label1.AutoSize = true;
-            label1.Location = new Point(48, 82);
+            label1.Location = new Point(48, 36);
             label1.Name = "label1";
             label1.Size = new Size(181, 15);
             label1.TabIndex = 20;
@@ -276,16 +277,28 @@
             // label2
             // 
             label2.AutoSize = true;
-            label2.Location = new Point(28, 319);
+            label2.Location = new Point(32, 271);
             label2.Name = "label2";
             label2.Size = new Size(220, 15);
             label2.TabIndex = 21;
             label2.Text = "Delete a Catalogue listing by ID or Name";
             // 
+            // btnSave
+            // 
+            btnSave.Font = new Font("Segoe UI", 9F, FontStyle.Bold, GraphicsUnit.Point);
+            btnSave.ForeColor = Color.ForestGreen;
+            btnSave.Location = new Point(72, 337);
+            btnSave.Name = "btnSave";
+            btnSave.Size = new Size(135, 23);
+            btnSave.TabIndex = 22;
+            btnSave.Text = "Save Changes";
+            btnSave.UseVisualStyleBackColor = true;
+            // 
             // UC_Inventory
             // 
             AutoScaleDimensions = new SizeF(7F, 15F);
             AutoScaleMode = AutoScaleMode.Font;
+            Controls.Add(btnSave);
             Controls.Add(label2);
             Controls.Add(label1);
             Controls.Add(txtDelete);
@@ -313,6 +326,7 @@
         private Button btnDelete;
         private Button btnClear;
         private Button btnUpdate;
+        private Button btnSave;
         private TextBox txtName;
         private TextBox txtID;
         private TextBox txtPrice;
