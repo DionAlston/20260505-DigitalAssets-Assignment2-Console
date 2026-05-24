@@ -11,7 +11,7 @@ namespace _20260422_Test
 
         }
 
-        // Button click events for UC/Home and Inventory from panelNav stimulus
+        // Button click events for UC/Home and Inventory
         private void btnInventory_Click(object sender, EventArgs e)
         {
             ShowScreen(new UC_Inventory());

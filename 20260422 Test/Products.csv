@@ -1,4 +1,4 @@
-ProductID,ProductName,ProductBrand,Price,Quantity
+ProductID,ProductName,ProductBrand,ProductPrice,ProductQuantity
 2000,Computer, Individual Laptop, Chromebook,ASUS,16589,
 2001,Computer, Individual Laptop, Thinkpad Gen3,Lenovo,200600,
 2002,Sticky Notes Pack of 8,Post-it,600,

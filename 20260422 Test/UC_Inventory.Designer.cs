@@ -47,15 +47,15 @@
             timer1 = new System.Windows.Forms.Timer(components);
             panel1 = new Panel();
             dgvInventory = new DataGridView();
-            ProductID = new DataGridViewTextBoxColumn();
-            ProductName = new DataGridViewTextBoxColumn();
-            ProductBrand = new DataGridViewTextBoxColumn();
-            Price = new DataGridViewTextBoxColumn();
-            Quantity = new DataGridViewTextBoxColumn();
             txtDelete = new TextBox();
             label1 = new Label();
             label2 = new Label();
             btnSave = new Button();
+            ProductID = new DataGridViewTextBoxColumn();
+            ProductName = new DataGridViewTextBoxColumn();
+            ProductBrand = new DataGridViewTextBoxColumn();
+            ProductPrice = new DataGridViewTextBoxColumn();
+            ProductQuantity = new DataGridViewTextBoxColumn();
             panel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)dgvInventory).BeginInit();
             SuspendLayout();
@@ -217,7 +217,7 @@
             // dgvInventory
             // 
             dgvInventory.ColumnHeadersHeightSizeMode = DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            dgvInventory.Columns.AddRange(new DataGridViewColumn[] { ProductID, ProductName, ProductBrand, Price, Quantity });
+            dgvInventory.Columns.AddRange(new DataGridViewColumn[] { ProductID, ProductName, ProductBrand, ProductPrice, ProductQuantity });
             dgvInventory.Location = new Point(282, 36);
             dgvInventory.Name = "dgvInventory";
             dgvInventory.ReadOnly = true;
@@ -225,36 +225,6 @@
             dgvInventory.Size = new Size(443, 324);
             dgvInventory.TabIndex = 18;
             dgvInventory.CellContentClick += dgvInventory_CellContentClick;
-            // 
-            // ProductID
-            // 
-            ProductID.HeaderText = "ID";
-            ProductID.Name = "ProductID";
-            ProductID.ReadOnly = true;
-            // 
-            // ProductName
-            // 
-            ProductName.HeaderText = "Name";
-            ProductName.Name = "ProductName";
-            ProductName.ReadOnly = true;
-            // 
-            // ProductBrand
-            // 
-            ProductBrand.HeaderText = "Brand";
-            ProductBrand.Name = "ProductBrand";
-            ProductBrand.ReadOnly = true;
-            // 
-            // Price
-            // 
-            Price.HeaderText = "Price";
-            Price.Name = "Price";
-            Price.ReadOnly = true;
-            // 
-            // Quantity
-            // 
-            Quantity.HeaderText = "Qty";
-            Quantity.Name = "Quantity";
-            Quantity.ReadOnly = true;
             // 
             // txtDelete
             // 
@@ -293,6 +263,36 @@
             btnSave.TabIndex = 22;
             btnSave.Text = "Save Changes";
             btnSave.UseVisualStyleBackColor = true;
+            // 
+            // ProductID
+            // 
+            ProductID.HeaderText = "ID";
+            ProductID.Name = "ProductID";
+            ProductID.ReadOnly = true;
+            // 
+            // ProductName
+            // 
+            ProductName.HeaderText = "Name";
+            ProductName.Name = "ProductName";
+            ProductName.ReadOnly = true;
+            // 
+            // ProductBrand
+            // 
+            ProductBrand.HeaderText = "Brand";
+            ProductBrand.Name = "ProductBrand";
+            ProductBrand.ReadOnly = true;
+            // 
+            // ProductPrice
+            // 
+            ProductPrice.HeaderText = "Price";
+            ProductPrice.Name = "ProductPrice";
+            ProductPrice.ReadOnly = true;
+            // 
+            // ProductQuantity
+            // 
+            ProductQuantity.HeaderText = "Qty";
+            ProductQuantity.Name = "ProductQuantity";
+            ProductQuantity.ReadOnly = true;
             // 
             // UC_Inventory
             // 
@@ -347,7 +347,7 @@
         private DataGridViewTextBoxColumn ProductID;
         private DataGridViewTextBoxColumn ProductName;
         private DataGridViewTextBoxColumn ProductBrand;
-        private DataGridViewTextBoxColumn Price;
-        private DataGridViewTextBoxColumn Quantity;
+        private DataGridViewTextBoxColumn ProductPrice;
+        private DataGridViewTextBoxColumn ProductQuantity;
     }
 }
