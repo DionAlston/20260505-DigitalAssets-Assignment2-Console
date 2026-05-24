@@ -155,6 +155,9 @@ namespace _20260422_Test
                 if (result == DialogResult.Yes)
                 {
                     _inventoryList.Remove(productToDelete);
+
+                    _bindingSource.ResetBindings(false);
+
                     txtDelete.Clear();
                     MessageBox.Show("Product Deleted from catalogue.");
 
@@ -187,8 +190,6 @@ namespace _20260422_Test
         {
 
             ClearFields();
-
-            return;         // Is return needed?
 
         }
 
@@ -242,6 +243,9 @@ namespace _20260422_Test
                 labelWelcome.Left = this.Width;
             }
         }
+
+
+        // BUTTON FIXES: In properties for all buttons (Add/Del/Save/Clear), Properties -> Click -> Assigned to btn Click events
 
         private void textBox1_TextChanged(object sender, EventArgs e)
         {
