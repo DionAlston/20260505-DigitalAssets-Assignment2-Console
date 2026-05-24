@@ -41,7 +41,36 @@ namespace _20260422_Test
                 _inventoryList.Add(item);
             }
 
-            dgvInventory.DataSource = _inventoryList;
+            // NEW: Source chained to dgv to ensure display
+            _bindingSource.DataSource = _inventoryList;
+            dgvInventory.DataSource = _bindingSource;
+
+            // Rename headers
+            ConfigureGridHeaders();
+        }
+
+        // FIXING CSV ACTIONS TAKEN
+        // Added dgv columns, worked = dgvInventory.datasource is communicating with properties
+        // CSV still not showing. Actions taken: Changed .csv file property Copy from Output Directory to Copy Always
+        // Output directory changed. Still not showing up
+        // Problem in Inventoryservice: Two typos
+
+        // Configure layout of .csv file with ConfigureGridHeaders
+        private void ConfigureGridHeaders()
+        {
+            // Ensure columns are generated before renaming
+            if (dgvInventory.Columns.Count > 0)
+            {
+                // Target the column using the exact Property name from your Product class
+                dgvInventory.Columns["ProductID"].HeaderText = "ID";
+                dgvInventory.Columns["ProductName"].HeaderText = "Name";
+                dgvInventory.Columns["ProductBrand"].HeaderText = "Brand";
+                dgvInventory.Columns["ProductPrice"].HeaderText = "Price";
+                dgvInventory.Columns["ProductQuantity"].HeaderText = "Quantity";
+
+                // NEW: Layout that fills entire dgv only
+                dgvInventory.AutoSizeColumnsMode = DataGridViewAutoSizeColumnsMode.Fill;
+            }
         }
 
         private void btnAdd_Click(object sender, EventArgs e)

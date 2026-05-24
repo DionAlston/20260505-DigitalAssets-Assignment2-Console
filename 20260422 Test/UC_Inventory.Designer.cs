@@ -51,11 +51,6 @@
             label1 = new Label();
             label2 = new Label();
             btnSave = new Button();
-            ProductID = new DataGridViewTextBoxColumn();
-            ProductName = new DataGridViewTextBoxColumn();
-            ProductBrand = new DataGridViewTextBoxColumn();
-            ProductPrice = new DataGridViewTextBoxColumn();
-            ProductQuantity = new DataGridViewTextBoxColumn();
             panel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)dgvInventory).BeginInit();
             SuspendLayout();
@@ -183,6 +178,7 @@
             // 
             labelWelcome.AutoSize = true;
             labelWelcome.Font = new Font("Segoe UI", 12F, FontStyle.Bold, GraphicsUnit.Point);
+            labelWelcome.ForeColor = SystemColors.ControlText;
             labelWelcome.Location = new Point(212, 2);
             labelWelcome.Name = "labelWelcome";
             labelWelcome.Size = new Size(292, 21);
@@ -217,7 +213,6 @@
             // dgvInventory
             // 
             dgvInventory.ColumnHeadersHeightSizeMode = DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            dgvInventory.Columns.AddRange(new DataGridViewColumn[] { ProductID, ProductName, ProductBrand, ProductPrice, ProductQuantity });
             dgvInventory.Location = new Point(282, 36);
             dgvInventory.Name = "dgvInventory";
             dgvInventory.ReadOnly = true;
@@ -263,36 +258,6 @@
             btnSave.TabIndex = 22;
             btnSave.Text = "Save Changes";
             btnSave.UseVisualStyleBackColor = true;
-            // 
-            // ProductID
-            // 
-            ProductID.HeaderText = "ID";
-            ProductID.Name = "ProductID";
-            ProductID.ReadOnly = true;
-            // 
-            // ProductName
-            // 
-            ProductName.HeaderText = "Name";
-            ProductName.Name = "ProductName";
-            ProductName.ReadOnly = true;
-            // 
-            // ProductBrand
-            // 
-            ProductBrand.HeaderText = "Brand";
-            ProductBrand.Name = "ProductBrand";
-            ProductBrand.ReadOnly = true;
-            // 
-            // ProductPrice
-            // 
-            ProductPrice.HeaderText = "Price";
-            ProductPrice.Name = "ProductPrice";
-            ProductPrice.ReadOnly = true;
-            // 
-            // ProductQuantity
-            // 
-            ProductQuantity.HeaderText = "Qty";
-            ProductQuantity.Name = "ProductQuantity";
-            ProductQuantity.ReadOnly = true;
             // 
             // UC_Inventory
             // 
@@ -344,10 +309,5 @@
         private TextBox txtDelete;
         private Label label1;
         private Label label2;
-        private DataGridViewTextBoxColumn ProductID;
-        private DataGridViewTextBoxColumn ProductName;
-        private DataGridViewTextBoxColumn ProductBrand;
-        private DataGridViewTextBoxColumn ProductPrice;
-        private DataGridViewTextBoxColumn ProductQuantity;
     }
 }

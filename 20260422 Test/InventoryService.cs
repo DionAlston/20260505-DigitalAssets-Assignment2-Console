@@ -19,9 +19,9 @@ namespace _20260422_Test
 
             foreach (string line in lines)
             {
-                string[] parts = line.Split('.');
+                string[] parts = line.Split(',');
 
-                if (parts.Length >= 4)
+                if (parts.Length >= 5)
                 {
                     try
                     {
@@ -48,7 +48,7 @@ namespace _20260422_Test
 
             using (StreamWriter writer = new StreamWriter(filepath))
             {
-                writer.WriteLine("ProductID,ProductName,ProductBrand,Price,Quantity");                                    // Very important - will not be able to save without matching columns
+                writer.WriteLine("ProductID,ProductName,ProductBrand,ProductPrice,ProductQuantity");                                    // Very important - will not be able to save without matching columns
                 {
                     foreach (var p in Products)
                     {
