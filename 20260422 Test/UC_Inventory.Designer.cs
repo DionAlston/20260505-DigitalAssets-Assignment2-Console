@@ -67,6 +67,7 @@
             btnAdd.TabIndex = 0;
             btnAdd.Text = "Add";
             btnAdd.UseVisualStyleBackColor = true;
+            btnAdd.Click += btnAdd_Click;
             // 
             // btnDelete
             // 
@@ -181,7 +182,7 @@
             // 
             labelWelcome.AutoSize = true;
             labelWelcome.Font = new Font("Segoe UI", 12F, FontStyle.Bold, GraphicsUnit.Point);
-            labelWelcome.Location = new Point(210, 12);
+            labelWelcome.Location = new Point(212, 2);
             labelWelcome.Name = "labelWelcome";
             labelWelcome.Size = new Size(292, 21);
             labelWelcome.TabIndex = 16;
@@ -260,7 +261,7 @@
             txtDelete.Name = "txtDelete";
             txtDelete.Size = new Size(141, 23);
             txtDelete.TabIndex = 19;
-            txtDelete.TextChanged += textBox1_TextChanged_1;
+            txtDelete.TextChanged += textBox1_TextChanged;
             // 
             // label1
             // 

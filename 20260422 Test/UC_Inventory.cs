@@ -44,14 +44,25 @@ namespace _20260422_Test
             dgvInventory.DataSource = _inventoryList;
         }
 
-        private void textBox1_TextChanged(object sender, EventArgs e)   // ???
-        {
-
-        }
-
         private void btnAdd_Click(object sender, EventArgs e)
         {
+            // Continue if inputs validated by machine
+            if (!ValidateInputs()) return;
 
+            // Create new product with reference to format
+            int newId = _inventoryList.Count + 1000;
+            string name = txtName.Text;
+            string brand = txtBrand.Text;
+            decimal price = decimal.Parse(txtPrice.Text);
+            int quantity = int.Parse(txtQuantity.Text);
+
+            Product newProduct = new Product(newId, name, brand, price, quantity);
+            _inventoryList.Add(newProduct);
+
+            // Refresh dgv through binding source
+            _bindingSource.ResetBindings(false);
+
+            ClearFields();
         }
 
         // Updating products logic
@@ -143,6 +154,15 @@ namespace _20260422_Test
             }
         }
 
+        private void btnClear_Click(object sender, EventArgs e)
+        {
+
+            ClearFields();
+
+            return;         // Is return needed?
+
+        }
+
         // Input validation
         // Validating user inputs into editable fields using regex
         private bool ValidateInputs()
@@ -181,7 +201,7 @@ namespace _20260422_Test
             // 17/05 ???
         }
 
-        // EXPERIMENTAL new feature / Moving text
+        // New feat / Moving text
         // 17/05 Make colour in gradiance (rainbow) with timer2?
         private void timer1_Tick(object sender, EventArgs e)
         {
@@ -194,7 +214,7 @@ namespace _20260422_Test
             }
         }
 
-        private void textBox1_TextChanged_1(object sender, EventArgs e)
+        private void textBox1_TextChanged(object sender, EventArgs e)
         {
 
         }
